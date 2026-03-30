@@ -1,0 +1,12 @@
+graph TD
+    subgraph AWS["AWS Cloud"]
+        S3[(S3)]
+        EB[EventBridge]
+        CW[CloudWatch]
+        IAM[IAM]
+    end
+
+    Lambda --> S3
+    S3 --> EB
+    EB --> CW
+    CW --> IAM
